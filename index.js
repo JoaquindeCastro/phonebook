@@ -8,6 +8,7 @@ const logger = morgan(':method :url :status :response-time ms - :res[content-len
 
 app.use(express.json())
 app.use(logger)
+app.use(express.static('build'))
 
 let people = [
     {
